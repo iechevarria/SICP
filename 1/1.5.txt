@@ -1,0 +1,3 @@
+Ben will observe that the interpreter never terminates when it uses
+applicative-order evaluation. (p) will expand to itself, and it will do so
+forever. With normal-order evaluation, the expression will evaluate to 0.
