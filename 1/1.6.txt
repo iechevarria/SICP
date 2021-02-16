@@ -1,0 +1,15 @@
+It causes an infinite loop. Because the cond is redefined with new generic
+arguments, the cond loses its special form which means that the expressions are
+all evaluated no matter the predicate.
+
+This example (http://community.schemewiki.org/?sicp-ex-1.6) helped me understand
+how this works:
+
+(define (iff <p> <c> <a>) (if <p> <c> <a>)) 
+(define (tryif a) (if (= a 0) 1 (/ 1 0))) 
+; 1
+(define (tryiff a) (iff (= a 0) 1 (/ 1 0)))
+; division by zero
+
+This was a pretty annoying question. Not sure how universally applicable it is -
+is this just Scheme trivia?
