@@ -1,0 +1,25 @@
+(define (+ a b)
+  (if (= a 0) 
+      b 
+      (inc (+ (dec a) b))))
+
+(+ 4 5)
+(+ 4 (inc (+ (dec 4) 5))
+(+ 4 (inc (+ 3 4))) .. keeps getting deeper, not writing this out lol
+
+This procedure is recursive.
+
+
+(define (+ a b)
+  (if (= a 0) 
+    b 
+    (+ (dec a) (inc b))))
+
+(+ 4 5)
+(+ 3 6)
+(+ 2 7)
+(+ 1 8)
+(+ 9 0)
+9
+
+This procedure is iterative.

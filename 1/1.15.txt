@@ -1,0 +1,4 @@
+1. The procedure p is applied 5 times - 12.15 must be divided by 3 at least five
+times before it's less than 0.1
+
+2. O(log n) growth because increase in a means log 3 increase in processing time
